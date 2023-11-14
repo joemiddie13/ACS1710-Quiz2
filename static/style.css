@@ -1,0 +1,44 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  background: rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+html {
+  background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Hubble_ultra_deep_field.jpg/2880px-Hubble_ultra_deep_field.jpg') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+h1 {
+  color: rgb(208, 228, 78);
+  text-align: center;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  font-family: 'Arial Black', sans-serif;
+  text-transform: uppercase;
+  perspective: 300px;
+  transform: rotateX(20deg);
+  transform-origin: 50% 100%;
+  font-size: 3em;
+  line-height: 1.6;
+}
+
+form {
+  margin-bottom: 20px;
+}
+
+input[type="text"] {
+  margin-right: 10px;
+}
+
+.error {
+  color: red;
+}

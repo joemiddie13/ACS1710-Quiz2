@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Star Wars Character Info</title>
+</head>
+<body>
+    <h1>Star Wars Character Information</h1>
+    <form method="post" action="/">
+        <label for="character_id">Character ID:</label>
+        <input type="text" id="character_id" name="character_id">
+        <input type="submit" value="Get Info">
+    </form>
+        {% if character_info %}
+        <h2>Character Details:</h2>
+        <p>Name: {{ character_info.name }}</p>
+        <p>Height: {{ character_info.height }}</p>
+        <p>Mass: {{ character_info.mass }}</p>
+        <p>Hair Color: {{ character_info.hair_color }}</p>
+        <p>Eye Color: {{ character_info.eye_color }}</p>
+        <p>Homeworld: {{ character_info.homeworld }}</p>
+    {% endif %}
+
+    <h2>Films:</h2>
+    <ul>
+        {% for film in character_info.films %}
+            <li>{{ film }}</li>
+        {% endfor %}
+    </ul>
+
+    {% if error_message %}
+        <p>Error: {{ error_message }}</p>
+    {% endif %}
+</body>
+</html>
